@@ -1,5 +1,5 @@
-﻿using CDP.Handlers.Patterns.Singleton;
-using System.Runtime.Serialization.Formatters.Binary;
+﻿using CDP.Handlers.Patterns.ActionObserver;
+using CDP.Handlers.Patterns.Singleton;
 
 namespace CDP.Handlers.Programs
 {
@@ -11,13 +11,9 @@ namespace CDP.Handlers.Programs
         public Program()
         {
             Activators.Add(PatternType.Singleton, new SingletonActivator());
+            Activators.Add(PatternType.ActionObserver, new ActionObserverActivator());
         }
         
-        public void Started()
-        {
-            ObserverAction.CallObserver?.Invoke();
-        }
-
         public void Run(string type)
         {
             Activator = Activators[type];
@@ -27,7 +23,7 @@ namespace CDP.Handlers.Programs
         public static void Main(string[] args)
         {
             Program program = new();
-            program.Run(PatternType.Singleton);
+            program.Run(PatternType.ActionObserver);
         }
     }
 }

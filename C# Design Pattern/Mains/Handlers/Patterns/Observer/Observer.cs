@@ -1,22 +1,12 @@
-﻿namespace CDP.Handlers.Patterns.Observer
+﻿public partial class PatternType
 {
-    public partial class PatternType
-    {
-        public const string Observer = "Observer";
-    }
+    public const string Observer = "Observer";
+}
 
+namespace CDP.Handlers.Patterns.ListenerObserver
+{
     public class Observer
     {
-        private void Notification()
-        {
-            ObserverAction.CallObserver += Started;
-        }
 
-        private void StopNotification()
-        {
-            ObserverAction.CallObserver -= Started;
-        }
-
-        public void Started() { }
     }
 }
