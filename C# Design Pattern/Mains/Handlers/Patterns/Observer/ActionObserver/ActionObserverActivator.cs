@@ -4,6 +4,7 @@ namespace CDP.Handlers.Patterns.ActionObserver
 {
     public class ActionObserverActivator : IActivatable
     {
+        // Create method which is the same return type with action and invoke them 
         public void Activate()
         {
             Garage garage = new();
