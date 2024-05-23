@@ -3,12 +3,13 @@
     [System.Serializable]
     public class Garage
     {
+        // Add function need to be called by action
         public Garage()
         {
             ActionObservers.OnPayment += Payment;
             ActionObservers.OnReceiveNewCar += ReceiveNewCar;
         }
-
+        // Remove function from action
         ~Garage()
         {
             ActionObservers.OnPayment -= Payment;
