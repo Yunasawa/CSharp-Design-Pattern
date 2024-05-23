@@ -12,6 +12,11 @@ namespace CDP.Handlers.Programs
         {
             Activators.Add(PatternType.Singleton, new SingletonActivator());
         }
+        
+        public void Started()
+        {
+            ObserverAction.CallObserver?.Invoke();
+        }
 
         public void Run(string type)
         {

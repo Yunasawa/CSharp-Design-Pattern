@@ -7,5 +7,16 @@
 
     public class Observer
     {
+        private void Notification()
+        {
+            ObserverAction.CallObserver += Started;
+        }
+
+        private void StopNotification()
+        {
+            ObserverAction.CallObserver -= Started;
+        }
+
+        public void Started() { }
     }
 }
