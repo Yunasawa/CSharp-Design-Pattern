@@ -29,7 +29,7 @@ namespace CDP.Handlers.Patterns.ListenerObserver
         {
             if (!_singleSubscribers.TryGetValue(typeof(E), out IListenerBase listeners)) return;
 
-            (listeners as IListener<E>).Invoke(newEvent);
+            (listeners as IListener<E>).Trigger(newEvent);
         }
         #endregion
 
@@ -53,7 +53,7 @@ namespace CDP.Handlers.Patterns.ListenerObserver
         {
             if (!_multipleSubscribers.TryGetValue(typeof(E), out List<IListenerBase> listeners)) return;
 
-            for (int i = 0; i < listeners.Count; i++) (listeners[i] as IListener<E>).Invoke(newEvent);
+            for (int i = 0; i < listeners.Count; i++) (listeners[i] as IListener<E>).Trigger(newEvent);
         }
         #endregion
     }
@@ -70,6 +70,6 @@ namespace CDP.Handlers.Patterns.ListenerObserver
     public interface IListenerBase { };
     public interface IListener<E> : IListenerBase
     {
-        void Invoke(E @event);
+        void Trigger(E @event);
     }
 }

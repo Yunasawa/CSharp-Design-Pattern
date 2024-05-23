@@ -6,7 +6,7 @@
         public Waiter() { this.RegisterMultiple(); }
         ~Waiter() { this.UnregisterMultiple(); }
 
-        public void Invoke(Dish dish)
+        public void Trigger(Dish dish)
         {
             Console.WriteLine($"Table {dish.Table} called {dish.Name} x{dish.Amount}");
         }
