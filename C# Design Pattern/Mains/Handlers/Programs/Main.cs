@@ -1,4 +1,5 @@
 ﻿using CDP.Handlers.Patterns.Singleton;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace CDP.Handlers.Programs
 {

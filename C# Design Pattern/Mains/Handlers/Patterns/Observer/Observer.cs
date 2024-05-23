@@ -1,6 +1,11 @@
 ﻿namespace CDP.Handlers.Patterns.Observer
 {
-    internal class Observer
+    public partial class PatternType
+    {
+        public const string Observer = "Observer";
+    }
+
+    public class Observer
     {
     }
 }
