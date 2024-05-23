@@ -10,6 +10,11 @@
 
   <ItemGroup>
     <Folder Include="Mains\Datas\" />
+    <Folder Include="Mains\Handlers\Patterns\Abstract Factory\" />
+    <Folder Include="Mains\Handlers\Patterns\Adapter\" />
+    <Folder Include="Mains\Handlers\Patterns\Factory Method\" />
+    <Folder Include="Mains\Handlers\Patterns\Builder\" />
+    <Folder Include="Mains\Handlers\Patterns\Prototype\" />
     <Folder Include="Mains\Handlers\Patterns\Observer\Samples\" />
   </ItemGroup>
 
