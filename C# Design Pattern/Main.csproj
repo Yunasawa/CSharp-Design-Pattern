@@ -16,7 +16,6 @@
     <Folder Include="Mains\Handlers\Patterns\Builder\Samples\" />
     <Folder Include="Mains\Handlers\Patterns\Factory Method\" />
     <Folder Include="Mains\Handlers\Patterns\Prototype\" />
-    <Folder Include="Mains\Handlers\Patterns\Observer\Samples\" />
   </ItemGroup>
 
 </Project>
