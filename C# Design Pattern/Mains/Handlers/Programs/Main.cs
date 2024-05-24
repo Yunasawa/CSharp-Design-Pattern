@@ -1,5 +1,6 @@
 ﻿using CDP.Handlers.Patterns.ActionObserver;
 using CDP.Handlers.Patterns.Builder;
+using CDP.Handlers.Patterns.Command;
 using CDP.Handlers.Patterns.ListenerObserver;
 using CDP.Handlers.Patterns.Singleton;
 
@@ -16,6 +17,7 @@ namespace CDP.Handlers.Programs
             Activators.Add(PatternType.ActionObserver, new ActionObserverActivator());
             Activators.Add(PatternType.ListenerObserver, new ListenerObserverActivator());
             Activators.Add(PatternType.Builder, new BuilderActivator());
+            Activators.Add(PatternType.Command, new CommandExecuter());
         }
         
         public void Run(string type)
@@ -27,7 +29,7 @@ namespace CDP.Handlers.Programs
         public static void Main(string[] args)
         {
             Program program = new();
-            program.Run(PatternType.Builder);
+            program.Run(PatternType.Command);
         }
     }
 }
