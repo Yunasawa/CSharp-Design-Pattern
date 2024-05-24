@@ -14,9 +14,10 @@ namespace CDP.Handlers.Patterns.Builder
             House house = new();
 
             house
-                .AddRoom("Living Room").AddFurniture("Living Room", "TV", "Sofa", "Clock")
-                .AddRoom("Kitchen").AddFurniture("Kitchen", "Sink", "Fridge", "Oven")
-                .AddRoom("Bath Room").AddFurniture("Bath Room", "Bath", "Sink", "Mirror", "Toilet", "Tower");
+                .AddRoom("Living Room", "Kitchen", "Bath Room")
+                .AddFurniture("Living Room", "TV", "Sofa", "Clock")
+                .AddFurniture("Kitchen", "Sink", "Fridge", "Oven", "Baker")
+                .AddFurniture("Bath Room", "Bath", "Sink", "Mirror", "Toilet", "Tower");
 
             house.Checkout();
         }
