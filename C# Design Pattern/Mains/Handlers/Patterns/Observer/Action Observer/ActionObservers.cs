@@ -1,9 +1,4 @@
-﻿public partial class PatternType
-{
-    public const string ActionObserver = "ActionObserver";
-}
-
-namespace CDP.Handlers.Patterns.ActionObserver
+﻿namespace CDP.Handlers.Patterns.ActionObserver
 {
     public static class ActionObservers
     {

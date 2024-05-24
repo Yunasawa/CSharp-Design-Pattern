@@ -1,9 +1,4 @@
-﻿public partial class PatternType
-{
-    public const string ListenerObserver = "ListenerObserver";
-}
-
-namespace CDP.Handlers.Patterns.ListenerObserver
+﻿namespace CDP.Handlers.Patterns.ListenerObserver
 {
     public class ListenerObserver
     {

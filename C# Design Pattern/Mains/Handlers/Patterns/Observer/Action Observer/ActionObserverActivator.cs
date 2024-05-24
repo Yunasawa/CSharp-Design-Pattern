@@ -1,5 +1,10 @@
 ﻿using CDP.Handlers.Programs;
 
+public partial class PatternType
+{
+    public const string ActionObserver = "ActionObserver";
+}
+
 namespace CDP.Handlers.Patterns.ActionObserver
 {
     public class ActionObserverActivator : IActivatable
