@@ -11,12 +11,12 @@ namespace CDP.Handlers.Patterns.Command
     {
         public void Activate()
         {
-            Light light = new();
-            EnterRoomCommand enterRoomCommand = new(light);
-            Human human = new();
+            CommandContainer container = new();
+            container.Register("Enter Room", new EnterRoomCommand());
+            container.Register("Buy Food", new BuyFoodCommand());
 
-            human.SetCommand(enterRoomCommand);
-            human.ExecuteCommand();
+            container.Execute("Enter Room", 123);
+            container.Execute("Buy Food", "Mango");
         }
     }
 }
